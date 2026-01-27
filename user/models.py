@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 
 from .managers import CustomUserManager
-from utils.enum_utils import UserRole, Gender
+from utils.enum_utils import UserRole
 
 
 class Timestamp(models.Model):
@@ -36,4 +36,3 @@ class User(AbstractBaseUser, Timestamp, PermissionsMixin):
     @property
     def role_name(self):
         return UserRole(self.role).name
-

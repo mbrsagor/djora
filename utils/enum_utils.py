@@ -1,7 +1,8 @@
 from enum import IntEnum
 
+
 class UserRole(IntEnum):
-    ADMIN    = 1
+    ADMIN = 1
     EDITOR = 2
     AUTHOR = 3
     SUBSCRIBER = 4
