@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -18,30 +18,30 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     
     <!-- PAGE TITLE HERE -->
-    <title>Build Template | Home Page Style 5</title>
+    <title>{% block title %}{% endblock %}</title>
     
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
     
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css"><!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css"><!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css"><!-- ANIMATE STYLE SHEET --> 
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"><!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css"><!-- BOOTSTRAP SELECT BOX STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css"><!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/loader.min.css"><!-- LOADER STYLE SHEET -->   
-    <link rel="stylesheet" type="text/css" href="css/style.css"><!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" class="skin" href="css/skin/skin-1.css"><!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/switcher.css"><!-- SIDE SWITCHER STYLE SHEET -->   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"><!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome/css/font-awesome.min.css' %}"><!-- FONTAWESOME STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.min.css' %}"><!-- FLATICON STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}"><!-- ANIMATE STYLE SHEET --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}"><!-- OWL CAROUSEL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-select.min.css' %}"><!-- BOOTSTRAP SELECT BOX STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.min.css' %}"><!-- MAGNIFIC POPUP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loader.min.css' %}"><!-- LOADER STYLE SHEET -->   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"><!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" class="skin" href="{% static 'css/skin/skin-1.css' %}"><!-- THEME COLOR CHANGE STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/switcher.css' %}"><!-- SIDE SWITCHER STYLE SHEET -->   
 
     
     <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/revolution/revolution/css/settings.css' %}">
     <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/revolution/revolution/css/navigation.css' %}">
     
     <!-- GOOGLE FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
@@ -78,8 +78,8 @@
             <div class="main-bar header-middle bg-white">
                 <div class="container">
                     <div class="logo-header">
-                        <a href="index.html">
-                            <img src="images/logo-12.png" width="216" height="37" alt="" >
+                        <a href="{% url 'homepage' %}">
+                            <img src="{% static 'images/logo-12.png' %}" width="216" height="37" alt="" >
                         </a>
                     </div>
                     <div class="header-info">
@@ -365,10 +365,10 @@
                            <div id="rev_slider_1014_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
                                 <ul>
                                 	<!-- SLIDE 1 -->	
-                                    <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slider1//slide1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{% static 'images/main-slider/slider1//slide1.jpg' %}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     
                                         <!-- MAIN IMAGE -->
-                                        <img src="images/main-slider/slider1//slide1.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                        <img src="{% static 'images/main-slider/slider1//slide1.jpg' %}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                         <!-- LAYERS -->
                                         
                                         <!-- LAYER NR. 1 [ for overlay ] -->
@@ -487,10 +487,10 @@
                                     </li>
                                     
                                     <!-- SLIDE 2 -->
-                                    <li data-index="rs-2000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slider1//slide2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <li data-index="rs-2000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{% static 'images/main-slider/slider1//slide2.jpg' %}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     
                                         <!-- MAIN IMAGE -->
-                                        <img src="images/main-slider/slider1//slide2.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                        <img src="{% static 'images/main-slider/slider1//slide2.jpg' %}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                         <!-- LAYERS -->
                                         
                                         <!-- LAYER NR. 1 [ for overlay ] -->
@@ -636,10 +636,10 @@
                                     </li>
                                     
                                     <!-- SLIDE 3 -->
-                                    <li data-index="rs-3000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slider1//slide3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <li data-index="rs-3000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{% static 'images/main-slider/slider1//slide3.jpg' %}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     
                                         <!-- MAIN IMAGE -->
-                                        <img src="images/main-slider/slider1//slide3.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                        <img src="{% static 'images/main-slider/slider1//slide3.jpg' %}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                         <!-- LAYERS -->
                                         
                                         <!-- LAYER NR. 1 [ for overlay ] -->
@@ -813,7 +813,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-md-12 m-b30">
                             <div class="about-com-pic-2">
-                                <img src="images/about-pic4.jpg" alt="">
+                                <img src="{% static 'images/about-pic4.jpg' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-12">
@@ -821,7 +821,7 @@
                                 <div class="col-lg-6 col-md-6 m-b30">
                                     <div class="wt-icon-box-wraper bx-style-1 p-a30 center bg-white">
                                         <div class="icon-lg site-text-primary m-b20">
-                                        	<span class="icon-cell site-text-primary"><img src="images/icon/home.png" alt=""></span>
+                                        	<span class="icon-cell site-text-primary"><img src="{% static 'images/icon/home.png' %}" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h5 class="wt-tilte text-uppercase">Building</h5>
@@ -832,7 +832,7 @@
                                 <div class="col-lg-6 col-md-6 m-b30">
                                     <div class="wt-icon-box-wraper bx-style-1 p-a30 center bg-white">
                                         <div class="icon-lg site-text-primary m-b20">
-                                        	<span class="icon-cell site-text-primary"><img src="images/icon/paint-brush.png" alt=""></span>
+                                        	<span class="icon-cell site-text-primary"><img src="{% static 'images/icon/paint-brush.png' %}" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h5 class="wt-tilte text-uppercase">Renovation</h5>
@@ -843,7 +843,7 @@
                                 <div class="col-lg-6 col-md-6 m-b30">
                                     <div class="wt-icon-box-wraper bx-style-1 p-a30 center bg-white">
                                         <div class="icon-lg site-text-primary  m-b20">
-                                        	<span class="icon-cell site-text-primary"><img src="images/icon/jackhammer.png" alt=""></span>
+                                        	<span class="icon-cell site-text-primary"><img src="{% static 'images/icon/jackhammer.png' %}" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h5 class="wt-tilte text-uppercase">Digging</h5>
@@ -854,7 +854,7 @@
                                 <div class="col-lg-6 col-md-6 m-b30">
                                     <div class="wt-icon-box-wraper bx-style-1 p-a30 center bg-white">
                                         <div class="icon-lg site-text-primary m-b20">
-                                        	<span class="icon-cell site-text-primary"><img src="images/icon/window.png" alt=""></span>
+                                        	<span class="icon-cell site-text-primary"><img src="{% static 'images/icon/window.png' %}" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h5 class="wt-tilte text-uppercase">interior</h5>
@@ -895,7 +895,7 @@
                                 <div class="item">
                                 	<div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="services-detail.html"><img src="images/our-work/pic1.jpg" alt=""></a>
+                                            <a href="services-detail.html"><img src="{% static 'images/our-work/pic1.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0 m-b5"><a href="services-detail.html">Shopping Mall</a></h4>
@@ -907,7 +907,7 @@
                                 <div class="item">
                                     <div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="services-detail.html"><img src="images/our-work/pic2.jpg" alt=""></a>
+                                            <a href="services-detail.html"><img src="{% static 'images/our-work/pic2.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0 m-b5"><a href="services-detail.html">Hospital Building</a></h4>
@@ -919,7 +919,7 @@
                                 <div class="item">
                                     <div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="services-detail.html"><img src="images/our-work/pic3.jpg" alt=""></a>
+                                            <a href="services-detail.html"><img src="{% static 'images/our-work/pic3.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0 m-b5"><a href="services-detail.html">Garden House</a></h4>
@@ -931,7 +931,7 @@
                                 <div class="item">
                                 	<div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="services-detail.html"><img src="images/our-work/pic1.jpg" alt=""></a>
+                                            <a href="services-detail.html"><img src="{% static 'images/our-work/pic1.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0 m-b5"><a href="services-detail.html">Shopping Mall</a></h4>
@@ -943,7 +943,7 @@
                                 <div class="item">
                                     <div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="services-detail.html"><img src="images/our-work/pic2.jpg" alt=""></a>
+                                            <a href="services-detail.html"><img src="{% static 'images/our-work/pic2.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0 m-b5"><a href="services-detail.html">Hospital Building</a></h4>
@@ -955,7 +955,7 @@
                                 <div class="item">
                                     <div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="services-detail.html"><img src="images/our-work/pic3.jpg" alt=""></a>
+                                            <a href="services-detail.html"><img src="{% static 'images/our-work/pic3.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0 m-b5"><a href="services-detail.html">Garden House</a></h4>
@@ -971,7 +971,7 @@
             <!-- SERVICES CONTENT END -->   
             
             <!-- SECTION CONTENT START -->
-            <div class="section-full  p-t80 p-b50 bg-no-repeat bg-cover " style="background-image:url(images/background/bg5.jpg);">
+            <div class="section-full  p-t80 p-b50 bg-no-repeat bg-cover " style="background-image:url({% static 'images/background/bg5.jpg' %});">
             	
                 <div class="container">
                         
@@ -1080,7 +1080,7 @@
                             <div class="wt-gallery-bx">
                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom-slow">
                                     <a href="portfolio-detail.html">
-                                        <img src="images/latest-projects/pic1.jpg"  alt="">
+                                        <img src="{% static 'images/latest-projects/pic1.jpg' %}"  alt="">
                                     </a>
                                     <div class="overlay-bx">
                                         <div class="overlay-icon">
@@ -1100,7 +1100,7 @@
                             <div class="wt-gallery-bx">
                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom-slow wt-img-effect zoom">
                                     <a href="portfolio-detail.html">
-                                        <img src="images/latest-projects/pic2.jpg"  alt="">
+                                        <img src="{% static 'images/latest-projects/pic2.jpg' %}"  alt="">
                                     </a>
                                     <div class="overlay-bx">
                                         <div class="overlay-icon">
@@ -1120,7 +1120,7 @@
                             <div class="wt-gallery-bx">
                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom-slow">
                                     <a href="portfolio-detail.html">
-                                        <img src="images/latest-projects/pic3.jpg"  alt="">
+                                        <img src="{% static 'images/latest-projects/pic3.jpg' %}"  alt="">
                                     </a>
                                     <div class="overlay-bx">
                                         <div class="overlay-icon">
@@ -1140,14 +1140,14 @@
                             <div class="wt-gallery-bx">
                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom-slow">
                                     <a href="portfolio-detail.html">
-                                        <img src="images/latest-projects/pic4.jpg"  alt="">
+                                        <img src="{% static 'images/latest-projects/pic4.jpg' %}"  alt="">
                                     </a>
                                     <div class="overlay-bx">
                                         <div class="overlay-icon">
                                             <a href="portfolio-detail.html">
                                                 <i class="fa fa-external-link wt-icon-box-xs"></i>
                                             </a>
-                                            <a href="images/gallery/pic4.jpg" class="mfp-link">
+                                            <a href="{% static 'images/gallery/pic4.jpg' %}" class="mfp-link">
                                                 <i class="fa fa-arrows-alt wt-icon-box-xs"></i>
                                             </a>
                                         </div>
@@ -1160,7 +1160,7 @@
                             <div class="wt-gallery-bx">
                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom-slow">
                                     <a href="portfolio-detail.html">
-                                        <img src="images/latest-projects/pic5.jpg"  alt="">
+                                        <img src="{% static 'images/latest-projects/pic5.jpg' %}"  alt="">
                                     </a>
                                     <div class="overlay-bx">
                                         <div class="overlay-icon">
@@ -1180,7 +1180,7 @@
                             <div class="wt-gallery-bx">
                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom-slow">
                                     <a href="portfolio-detail.html">
-                                        <img src="images/latest-projects/pic6.jpg"  alt="">
+                                        <img src="{% static 'images/latest-projects/pic6.jpg' %}"  alt="">
                                     </a>
                                     <div class="overlay-bx">
                                         <div class="overlay-icon">
@@ -1202,7 +1202,7 @@
             <!-- LATEST PROJECT SECTION END -->                                          
             
             <!-- COMPANY DETAIL SECTION START -->
-            <div class="section-full  p-t50 p-b10 overlay-wraper bg-repeat"  data-stellar-background-ratio="0.5"  style="background-image:url(images/switcher/switcher-patterns/large/pt2.jpg)">
+            <div class="section-full  p-t50 p-b10 overlay-wraper bg-repeat"  data-stellar-background-ratio="0.5"  style="background-image:url({% static 'images/switcher/switcher-patterns/large/pt2.jpg' %})">
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                 	
@@ -1250,7 +1250,7 @@
             <!-- COMPANY DETAIL SECTION End -->            
 
             <!-- WHY CHOOSE US SECTION START  -->
-            <div class="section-full bg-gray p-t80 p-b50 bg-no-repeat bg-left-center" style="background-image:url(images/background/why-choose-pic-2.png);">
+            <div class="section-full bg-gray p-t80 p-b50 bg-no-repeat bg-left-center" style="background-image:url({% static 'images/background/why-choose-pic-2.png' %});">
             	<div class="container">
                     <!-- TITLE START-->
                     <div class="section-head text-center">
@@ -1271,7 +1271,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 m-b10 animate_line">
                                 <div class="wt-icon-box-wraper  p-a30 center bg-white">
                                     <div class="icon-lg site-text-primary m-b20">
-                                        <a href="#" class="icon-cell"><img src="images/icon/engineer.png" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{% static 'images/icon/engineer.png' %}" alt=""></a>
                                     </div>
                                     <div class="icon-content">
                                         <h5 class="wt-tilte text-uppercase">BEST QUALITY</h5>
@@ -1283,7 +1283,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 m-b10 animate_line">
                                 <div class="wt-icon-box-wraper  p-a30 center bg-white">
                                     <div class="icon-lg site-text-primary m-b20">
-                                        <a href="#" class="icon-cell"><img src="images/icon/light-bulb.png" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{% static 'images/icon/light-bulb.png' %}" alt=""></a>
                                     </div>
                                     <div class="icon-content ">
                                         <h5 class="wt-tilte text-uppercase">INTEGRITY</h5>
@@ -1295,7 +1295,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 m-b10 animate_line">
                                 <div class="wt-icon-box-wraper  p-a30 center bg-white">
                                     <div class="icon-lg site-text-primary m-b20">
-                                        <a href="#" class="icon-cell"><img src="images/icon/compass.png" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{% static 'images/icon/compass.png' %}" alt=""></a>
                                     </div>
                                     <div class="icon-content">
                                         <h5 class="wt-tilte text-uppercase">STRATEGY</h5>
@@ -1307,7 +1307,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 m-b10 animate_line">
                                 <div class="wt-icon-box-wraper  p-a30 center bg-white">
                                     <div class="icon-lg site-text-primary m-b20">
-                                        <a href="#" class="icon-cell"><img src="images/icon/helmet.png" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{% static 'images/icon/helmet.png' %}" alt=""></a>
                                     </div>
                                     <div class="icon-content">
                                         <h5 class="wt-tilte text-uppercase">SAFETY</h5>
@@ -1319,7 +1319,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 m-b10 animate_line">
                                 <div class="wt-icon-box-wraper  p-a30 center bg-white">
                                     <div class="icon-lg site-text-primary m-b20">
-                                        <a href="#" class="icon-cell"><img src="images/icon/brickwall.png" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{% static 'images/icon/brickwall.png' %}" alt=""></a>
                                     </div>
                                     <div class="icon-content">
                                         <h5 class="wt-tilte text-uppercase">COMMUNITY</h5>
@@ -1331,7 +1331,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 m-b10 animate_line">
                                 <div class="wt-icon-box-wraper  p-a30 center bg-white">
                                     <div class="icon-lg site-text-primary m-b20">
-                                        <a href="#" class="icon-cell"><img src="images/icon/no-entry.png" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{% static 'images/icon/no-entry.png' %}" alt=""></a>
                                     </div>
                                     <div class="icon-content">
                                         <h5 class="wt-tilte text-uppercase">SUSTAINABILITY</h5>
@@ -1368,7 +1368,7 @@
                         <div class="owl-carousel testimonial-one m-b30">
                             <div class="item">
                                 <div class="testimonial-1 testimonial-bg">
-                                    <div class="testimonial-pic  radius shadow"><img src="images/testimonials/pic1.jpg" width="100" height="100" alt=""></div>
+                                    <div class="testimonial-pic  radius shadow"><img src="{% static 'images/testimonials/pic1.jpg' %}" width="100" height="100" alt=""></div>
                                     <div class="testimonial-detail">
                                         <strong class="testimonial-name">Steve Jobs</strong>
                                         <span class="testimonial-position">Cfo Loop Inc</span>
@@ -1380,7 +1380,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimonial-1 testimonial-bg">
-                                    <div class="testimonial-pic  radius shadow"><img src="images/testimonials/pic2.jpg" width="100" height="100" alt=""></div>
+                                    <div class="testimonial-pic  radius shadow"><img src="{% static 'images/testimonials/pic2.jpg' %}" width="100" height="100" alt=""></div>
                                     <div class="testimonial-detail">
                                         <strong class="testimonial-name">Steve Jobs</strong>
                                         <span class="testimonial-position">Cfo Loop Inc</span>
@@ -1392,7 +1392,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimonial-1 testimonial-bg">
-                                    <div class="testimonial-pic  radius shadow"><img src="images/testimonials/pic3.jpg" width="100" height="100" alt=""></div>
+                                    <div class="testimonial-pic  radius shadow"><img src="{% static 'images/testimonials/pic3.jpg' %}" width="100" height="100" alt=""></div>
                                     <div class="testimonial-detail">
                                         <strong class="testimonial-name">Steve Jobs</strong>
                                         <span class="testimonial-position">Cfo Loop Inc</span>
@@ -1476,7 +1476,7 @@
                                 
                                 <div class="blog-post latest-blog-3 blog-md date-style-2 clearfix">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="blog-single.html"><img src="images/blog/grid/pic1.jpg" alt=""></a>
+                                        <a href="blog-single.html"><img src="{% static 'images/blog/grid/pic1.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="wt-post-title ">
@@ -1498,7 +1498,7 @@
                                 
                                 <div class="blog-post latest-blog-3 blog-md date-style-2 clearfix">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="blog-single.html"><img src="images/blog/grid/pic5.jpg" alt=""></a>
+                                        <a href="blog-single.html"><img src="{% static 'images/blog/grid/pic5.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="wt-post-title ">
@@ -1549,7 +1549,7 @@
                             <div class="col-md-4 col-sm-4  m-tb15">
                                 <div class="wt-team-one bg-gray-light">
                                     <div class="wt-team-media">
-                                        <a href="our-team-detail.html"><img src="images/our-team4/pic1.jpg" class="" alt=""></a>
+                                        <a href="our-team-detail.html"><img src="{% static 'images/our-team4/pic1.jpg' %}" class="" alt=""></a>
                                     </div>
                                     <div class="wt-team-info text-center bg-gray-light-1 p-a20">
                                         <h4 class="wt-team-title"><a href="our-team-detail.html">Richard Wagner</a></h4>
@@ -1569,7 +1569,7 @@
                             <div class="col-md-4 col-sm-4 m-tb15">
                                 <div class="wt-team-one bg-gray-light">
                                     <div class="wt-team-media ">
-                                        <a href="our-team-detail.html"><img src="images/our-team4/pic2.jpg" alt=""></a>
+                                        <a href="our-team-detail.html"><img src="{% static 'images/our-team4/pic2.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="wt-team-info text-center bg-gray-light-1 p-a20">
                                         <h4 class="wt-team-title"><a href="our-team-detail.html">Lisa Anderson</a></h4>
@@ -1589,7 +1589,7 @@
                             <div class="col-md-4 col-sm-4  m-tb15">
                                 <div class="wt-team-one  bg-gray-light">
                                     <div class="wt-team-media">
-                                        <a href="our-team-detail.html"><img src="images/our-team4/pic4.jpg" alt=""></a>
+                                        <a href="our-team-detail.html"><img src="{% static 'images/our-team4/pic4.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="wt-team-info text-center bg-gray-light-1 p-a20">
                                         <h4 class="wt-team-title"><a href="our-team-detail.html">Tommy Atkins</a></h4>
@@ -1614,7 +1614,7 @@
             <!-- OUR TEAM MEMBER SECTION END -->
             
             <!-- OUR CLIENT SLIDER START -->
-            <div class="section-full overlay-wraper bg-cover bg-repeat-x site-bg-primary" style="background-image:url(images/background/bg7.png)">
+            <div class="section-full overlay-wraper bg-cover bg-repeat-x site-bg-primary" style="background-image:url({% static 'images/background/bg7.png' %})">
                 <div class="container">
                    
                     <!-- IMAGE CAROUSEL START -->
@@ -1625,7 +1625,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w1.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w1.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1633,7 +1633,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w2.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w2.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1641,7 +1641,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w3.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w3.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1649,7 +1649,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w4.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w4.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1657,7 +1657,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w5.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w5.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1665,7 +1665,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w6.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w6.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1673,7 +1673,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w1.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w1.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1681,7 +1681,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w2.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w2.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1689,7 +1689,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w3.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w3.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1697,7 +1697,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w4.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w4.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1705,7 +1705,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w5.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w5.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1713,7 +1713,7 @@
                             <div class="item">
                                 <div class="ow-client-logo">
                                     <div class="client-logo wt-img-effect on-color">
-                                        <a href="about-1.html"><img src="images/client-logo/w6.png" alt=""></a>
+                                        <a href="about-1.html"><img src="{% static 'images/client-logo/w6.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>                        
@@ -1732,7 +1732,7 @@
         <!-- FOOTER START -->
         <footer class="site-footer footer-dark">
             <!-- COLL-TO ACTION START -->
-            <div class="call-to-action-wrap call-to-action-skew site-bg-primary bg-no-repeat" style="background-image:url(images/background/bg-4.png);">
+            <div class="call-to-action-wrap call-to-action-skew site-bg-primary bg-no-repeat" style="background-image:url({% static 'images/background/bg-4.png' %});">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-md-7">
@@ -1762,7 +1762,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/footer-logo.png" width="230" height="67" alt="image"></a>
+                                    <a href="index.html"><img src="{% static 'images/footer-logo.png' %}" width="230" height="67" alt="image"></a>
                                 </div>
                                 <p>Thewebmax ipsum dolor sit amet, interior adipiscing elit,
                                       sed diam nonummy nibh is euismod tincidunt ut laoreet dolore agna aliquam erat .   
@@ -2022,7 +2022,7 @@
                 </form>
               </div>
               <div class="modal-footer text-center">
-                <div class="text-center"><img src="images/logo-dark.png" alt=""></div>
+                <div class="text-center"><img src="{% static 'images/logo-dark.png' %}" alt=""></div>
               </div>
             </div>
           </div>
@@ -2057,30 +2057,30 @@
 <!-- LOADING AREA  END ====== -->
 
 <!-- JAVASCRIPT  FILES ========================================= --> 
-<script   src="js/jquery-3.6.1.min.js"></script><!-- JQUERY.MIN JS -->
-<script   src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
-<script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script   src="js/bootstrap-select.min.js"></script><!-- FORM JS -->
-<script   src="js/jquery.bootstrap-touchspin.min.js"></script><!-- FORM JS -->
-<script   src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-<script   src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script   src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script   src="js/waypoints-sticky.min.js"></script><!-- COUNTERUP JS -->
-<script   src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-<script   src="js/imagesloaded.pkgd.min.js"></script><!-- MASONRY  -->
-<script   src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-<script   src="js/scrolla.min.js"></script><!-- ON SCROLL CONTENT ANIMTE   --> 
-<script   src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-<script   src="js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
-<script   src="js/switcher.js"></script><!-- SWITCHER FUCTIONS  -->
+<script   src="{% static 'js/jquery-3.6.1.min.js' %}"></script><!-- JQUERY.MIN JS -->
+<script   src="{% static 'js/popper.min.js' %}"></script><!-- POPPER.MIN JS -->
+<script   src="{% static 'js/bootstrap.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script   src="{% static 'js/bootstrap-select.min.js' %}"></script><!-- FORM JS -->
+<script   src="{% static 'js/jquery.bootstrap-touchspin.min.js' %}"></script><!-- FORM JS -->
+<script   src="{% static 'js/magnific-popup.min.js' %}"></script><!-- MAGNIFIC-POPUP JS -->
+<script   src="{% static 'js/waypoints.min.js' %}"></script><!-- WAYPOINTS JS -->
+<script   src="{% static 'js/counterup.min.js' %}"></script><!-- COUNTERUP JS -->
+<script   src="{% static 'js/waypoints-sticky.min.js' %}"></script><!-- COUNTERUP JS -->
+<script   src="{% static 'js/isotope.pkgd.min.js' %}"></script><!-- MASONRY  -->
+<script   src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script><!-- MASONRY  -->
+<script   src="{% static 'js/owl.carousel.min.js' %}"></script><!-- OWL  SLIDER  -->
+<script   src="{% static 'js/scrolla.min.js' %}"></script><!-- ON SCROLL CONTENT ANIMTE   --> 
+<script   src="{% static 'js/custom.js' %}"></script><!-- CUSTOM FUCTIONS  -->
+<script   src="{% static 'js/shortcode.js' %}"></script><!-- SHORTCODE FUCTIONS  -->
+<script   src="{% static 'js/switcher.js' %}"></script><!-- SWITCHER FUCTIONS  -->
 
 <!-- SLIDER REVOLUTION -->
-<script  src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script  src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script  src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
+<script  src="{% static 'plugins/revolution/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script  src="{% static 'plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script  src="{% static 'plugins/revolution/revolution/js/extensions/revolution-plugin.js' %}"></script>
 
 <!-- REVOLUTION SLIDER SCRIPT FILES -->
-<script  src="js/rev-script-4.js"></script>
+<script  src="{% static 'js/rev-script-4.js' %}"></script>
 </body>
 
 </html>
