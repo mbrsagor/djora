@@ -3,10 +3,10 @@
         <thead>
         <tr>
             <th>Title</th>
-            <th>Subtitle</th>
-            <th>Order</th>
-            <th>Status</th>
+            <th>Button Text</th>
+            <th>Button URL</th>
             <th>Image</th>
+            <th>Status</th>
             <th>Created</th>
             <th class="text-center">Actions</th>
         </tr>
@@ -15,15 +15,15 @@
         {% for obj in sliders %}
             <tr>
                 <td>{{ obj.title }}</td>
-                <td>{{ obj.subtitle }}</td>
-                <td>{{ obj.ordering }}</td>
+                <td>{{ obj.button_text }}</td>
+                <td>{{ obj.button_url }}</td>
                 <td>
                     {% if obj.is_active %} Activated {% else %}
                         Deactivated {% endif %}
                 </td>
                 <td>
-                    {% if obj.featured_image %}
-                        <img width="50" src="{{ obj.featured_image.url }}" alt="icon">
+                    {% if obj.image %}
+                        <img width="50" src="{{ obj.image.url }}" alt="icon">
                     {% endif %}
                 </td>
                 <td>{{ obj.created_at }}</td>

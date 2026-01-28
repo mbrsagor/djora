@@ -7,4 +7,16 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>
+        {% url 'add_slider' as add_slider %}
+        {% url 'slider_listview' as slider_lv %}
+        <li class="treeview {% if request.path == add_slider %} active {% elif request.path == slider_lv %} active {% endif %}">
+            <a href="#">
+                <i class="fa fa-sliders"></i> <span>Slider</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ add_slider }}"><i class="fa fa-circle-o"></i>Add New Slider</a></li>
+                <li><a href="{{ slider_lv }}"><i class="fa fa-circle-o"></i> List Of Sliders</a></li>
+            </ul>
+        </li>
 </section>

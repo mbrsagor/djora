@@ -3,7 +3,7 @@
 {% block title %} Slider Listview {% endblock %}
 
 {% block content %}
-    {% include 'slider/page_header.html' %}
+    {% include 'features/slider/page_header.html' %}
     <!-- Main content -->
     <section class="content">
         <div class="row">
@@ -20,14 +20,14 @@
                                         data-placement="left"
                                         title="Create a new slider"
                                         class="btn btn-primary btn-sm"
-                                        href="{% url 'create_slider' %}">
+                                        href="{% url 'add_slider' %}">
                                     <i class="fa fa-plus"></i>
                                 </a>
                             </div>
                         </div>
                     </div><!-- /.box-header -->
                     <div class="box-body">
-                        {% include 'slider/table.html' %}
+                        {% include 'features/slider/table.html' %}
                     </div>
                     <!-- /.box-body -->
                 </div><!-- /.box -->
