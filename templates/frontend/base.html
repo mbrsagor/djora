@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">    
+    <meta name="description" content="">
+    
+    <!-- FAVICONS ICON -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+    
+    <!-- PAGE TITLE HERE -->
+    <title>{% block title %}{% endblock %}</title>
+    
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    {% include 'frontend/stylesheet.html' %}
+    
+</head>
+
+<body id="bg">
+
+	<div class="page-wraper"> 
+       	
+        <!-- HEADER START -->
+        {% include 'frontend/header.html' %}
+        <!-- HEADER END -->
+        
+        <!-- CONTENT START -->
+        <div class="page-content">
+            {% block content %}{% endblock %}
+        </div>
+        <!-- CONTENT END -->
+        
+        <!-- FOOTER START -->
+        {% include 'frontend/footer.html' %}
+        <!-- FOOTER END -->
+
+        
+        <!-- SCROLL TOP BUTTON -->
+        <button class="scroltop"><span class="fa fa-arrow-up relative" id="btn-vibrate"></span>Top</button>
+    </div>
+ 
+
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="loader">
+            <span class="block-1"></span>
+            <span class="block-2"></span>
+            <span class="block-3"></span>
+            <span class="block-4"></span>
+            <span class="block-5"></span>
+            <span class="block-6"></span>
+            <span class="block-7"></span>
+            <span class="block-8"></span>
+            <span class="block-9"></span>
+            <span class="block-10"></span>
+            <span class="block-11"></span>
+            <span class="block-12"></span>
+            <span class="block-13"></span>
+            <span class="block-14"></span>
+            <span class="block-15"></span>
+            <span class="block-16"></span>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+
+{% include 'frontend/scripts.html' %}
+
+</body>
+
+</html>
