@@ -50,6 +50,7 @@ DEFAULT_APPS = [
 
 CUSTOM_APPS = [
     'user',
+    'backend',
     'frontend',
 ]
 
