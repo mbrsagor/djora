@@ -1,0 +1,10 @@
+{% load static %}
+<section class="sidebar">
+    <ul class="sidebar-menu">
+        {% url 'dashboard' as dashboard %}
+        <li class="{% if request.path == dashboard %} active {% endif %} treeview">
+            <a href="{{ dashboard }}">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            </a>
+        </li>
+</section>
