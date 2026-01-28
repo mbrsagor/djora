@@ -1,0 +1,43 @@
+{% extends 'backend/base.html' %}
+
+{% block title %} Slider Listview {% endblock %}
+
+{% block content %}
+    {% include 'slider/page_header.html' %}
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="box-title">List of sliders</h3>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <a
+                                        data-toggle="tooltip"
+                                        data-placement="left"
+                                        title="Create a new slider"
+                                        class="btn btn-primary btn-sm"
+                                        href="{% url 'create_slider' %}">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        {% include 'slider/table.html' %}
+                    </div>
+                    <!-- /.box-body -->
+                </div><!-- /.box -->
+                <div class="text-right">
+                    {% include 'common/pagination.html' %}
+                </div>
+            </div>
+        </div>
+        <div class="tosterMessage" id="messageArea">
+            {% include 'common/message.html' %}
+        </div>
+    </section>
+{% endblock %}

@@ -8,7 +8,7 @@ class SliderModelForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.Textarea(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),
             'button_text': forms.TextInput(attrs={'class': 'form-control'}),
             'button_url': forms.URLInput(attrs={'class': 'form-control'}),
             'image': forms.FileInput(attrs={'class': 'form-control'}),

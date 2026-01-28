@@ -1,0 +1,51 @@
+{% if sliders %}
+    <table class="table table-bordered table-striped table-responsive">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Order</th>
+            <th>Status</th>
+            <th>Image</th>
+            <th>Created</th>
+            <th class="text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for obj in sliders %}
+            <tr>
+                <td>{{ obj.title }}</td>
+                <td>{{ obj.subtitle }}</td>
+                <td>{{ obj.ordering }}</td>
+                <td>
+                    {% if obj.is_active %} Activated {% else %}
+                        Deactivated {% endif %}
+                </td>
+                <td>
+                    {% if obj.featured_image %}
+                        <img width="50" src="{{ obj.featured_image.url }}" alt="icon">
+                    {% endif %}
+                </td>
+                <td>{{ obj.created_at }}</td>
+                <td class="text-center">
+                    <a
+                            data-toggle="tooltip"
+                            data-placement="left"
+                            title="Update the slider"
+                            class="btn btn-sm btn-success"
+                            href="{% url 'slider_update' obj.pk %}">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a
+                            data-toggle="tooltip"
+                            data-placement="left"
+                            title="Delete the slider"
+                            class="btn btn-sm btn-danger"
+                            href="{% url 'slider_delete' obj.pk %}">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
