@@ -1,5 +1,6 @@
 from django.urls import path
 from backend.views import add_slider_view, dashboard_view
+from backend import api_views
 
 
 urlpatterns = [
@@ -9,4 +10,7 @@ urlpatterns = [
     path('slider-listview/', add_slider_view.SliderListView.as_view(), name='slider_listview'),
     path('slider-update/<pk>/', add_slider_view.SliderUpdateView.as_view(), name='slider_update'),
     path('slider-delete/<pk>/', add_slider_view.SliderDeleteView.as_view(), name='slider_delete'),
+
+    # API
+    path('api/pages/<slug:slug>/', api_views.PageDetailAPIView.as_view(), name='page_detail_api'),
 ]

@@ -46,6 +46,8 @@ DEFAULT_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'nested_admin',
+    'rest_framework',
 ]
 
 CUSTOM_APPS = [

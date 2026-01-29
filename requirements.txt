@@ -11,4 +11,6 @@ python-dateutil==2.9.0.post0
 s3transfer==0.16.0
 six==1.17.0
 sqlparse==0.5.5
+django-nested-admin==4.0.2
+djangorestframework==3.14.0
 urllib3==2.6.3
